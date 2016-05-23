@@ -16,3 +16,12 @@ hs_err_pid*
 
 #files
 howDo.txt
+
+#java
+/target
+/.classpath
+/.project
+/.settings
+/tomcat.*
+/.idea
+/*.iml
