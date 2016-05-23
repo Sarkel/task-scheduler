@@ -13,3 +13,6 @@ hs_err_pid*
 
 #ide settings
 .idea/
+
+#files
+howDo.txt

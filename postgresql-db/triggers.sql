@@ -49,3 +49,10 @@ BEFORE INSERT OR UPDATE
 ON Task_scheduler.Penalty
 FOR EACH ROW
 EXECUTE PROCEDURE Task_scheduler.set_dates();
+
+-- Recurrence triggers
+CREATE TRIGGER Recurrence_set_dates
+BEFORE INSERT OR UPDATE
+ON Task_scheduler.Recurrence
+FOR EACH ROW
+EXECUTE PROCEDURE Task_scheduler.set_dates();

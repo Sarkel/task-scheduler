@@ -21,6 +21,7 @@ CREATE TABLE Task_scheduler.Task (
   "End"           TIMESTAMP WITH TIME ZONE NOT NULL,
   "Owner"         INT                      NOT NULL,
   "Done"          BOOLEAN                  NOT NULL DEFAULT 'false',
+  "Recurrence" int NOT NULL,
   "Created_date"  TIMESTAMP WITH TIME ZONE NOT NULL,
   "Modified_date" TIMESTAMP WITH TIME ZONE NOT NULL,
   CONSTRAINT Task_pk PRIMARY KEY ("Id"),
@@ -75,6 +76,8 @@ CREATE TABLE Task_scheduler.Recurrence (
   "Id" serial NOT NULL,
   "Name" varchar(80) NOT NULL,
   "Dashboard" int,
+  "Created_date"  TIMESTAMP WITH TIME ZONE NOT NULL,
+  "Modified_date" TIMESTAMP WITH TIME ZONE NOT NULL,
   CONSTRAINT Recurrence_pk PRIMARY KEY ("Id")
 );
 

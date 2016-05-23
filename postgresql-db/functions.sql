@@ -34,7 +34,3 @@ BEGIN
   END IF;
 END;
 ' LANGUAGE plpgsql;
-
-CREATE FUNCTION Task_scheduler.sum_penalty(INT) RETURNS MONEY AS '
-  SELECT sum(p.Amound) FROM Task_scheduler.Penalty AS p WHERE p.User = $1;
-' LANGUAGE SQL;
